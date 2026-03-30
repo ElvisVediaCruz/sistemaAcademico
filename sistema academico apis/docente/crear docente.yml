@@ -1,0 +1,28 @@
+info:
+  name: crear docente
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/docente/crear
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "ci": 8817891,
+        "nombre": "elvis",
+        "apellidos": "vedia cruz",
+        "edad": 20,
+        "password": "elvis"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
